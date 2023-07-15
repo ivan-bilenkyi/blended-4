@@ -62,16 +62,44 @@
  *! а не довільний набір символів не потрібно.
  */
 
-let total = 0;
+// let total = 0;
 
-let number = prompt('Input number');
+// let number = prompt('Input number');
 
-while (number !== null){
-   total+= Number(number);
-   number = prompt('Input number');
+// while (number !== null){
+//    total+= Number(number);
+//    number = prompt('Input number');
 
+// }
+// alert(total);
+
+/*
+ Напишіть через свіч пошук автора мови програмування.
+ Пишемо назву мови у шаблонному рядку отримує відповідь
+ мова та автор
+
+ 
+ PHP Расмус Лердорф
+ C# група інженерів компанії Microsoft під керівництвом Андерса Хейлсберга та Скотта Вільтаумота
+ Swift Кріс Латтнер
+ JS Брендан Ейх
+ Java Джеймс Гослінг
+ Python Гвідо ван Россум
+*/
+
+let lang = prompt("Автор мови програмування?").toLowerCase().trim();
+
+
+switch (lang) {
+    case "c#": console.log(`${lang} група інженерів компанії Microsoft під керівництвом Андерса Хейлсберга та Скотта Вільтаумота`);
+        break;
+    case "swift": console.log(`${lang} Кріс Латтнер`);
+        break;
+    case "js": console.log(`${lang} Брендан Ейх`);
+        break;
+    default: "Автор невідомий"
 }
-alert(total);
+
 
 
 
