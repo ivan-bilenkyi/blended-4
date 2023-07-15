@@ -87,18 +87,21 @@
  Python Гвідо ван Россум
 */
 
-let lang = prompt("Автор мови програмування?").toLowerCase().trim();
+// let lang = prompt("Автор мови програмування?").toLowerCase().trim();
 
 
-switch (lang) {
-    case "c#": console.log(`${lang} група інженерів компанії Microsoft під керівництвом Андерса Хейлсберга та Скотта Вільтаумота`);
-        break;
-    case "swift": console.log(`${lang} Кріс Латтнер`);
-        break;
-    case "js": console.log(`${lang} Брендан Ейх`);
-        break;
-    default: "Автор невідомий"
-}
+// switch (lang) {
+//     case "c#": console.log(`${lang} група інженерів компанії Microsoft під керівництвом Андерса Хейлсберга та Скотта Вільтаумота`);
+//         break;
+//     case "swift":
+//  console.log(`${lang} Кріс Латтнер`);
+//         break;
+//     case "js": 
+// console.log(`${lang} Брендан Ейх`);
+//         break;
+//     default: "Автор невідомий"
+// }
+
 
 /**
  *? Напишите цикл, который предлагает ввести
@@ -111,5 +114,12 @@ switch (lang) {
  */
 
 
+let promptNumber = '';
 
+do {
+     promptNumber = prompt('Enter a number greater hundred?');
+}
+while(promptNumber <= 100)
+
+alert('Thank You, you did it!');
 
