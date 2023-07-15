@@ -38,14 +38,40 @@
  *? Виведіть у консоль усі парних чисел від min до max
  */
 
-const max = 50;
-const min = 23;
+// const max = 50;
+// const min = 23;
 
-// for (let i = max; i >= min; i--) {
-//    console.log(i)
+// // for (let i = max; i >= min; i--) {
+// //    console.log(i)
+// // }
+// for (let i = min; i <= max; i++) {
+//    if (i % 2 !== 0) {
+//       console.log(i)
+//    }
 // }
-for (let i = min; i <= max; i++) {
-   if (i % 2 !== 0) {
-      console.log(i)
-   }
+/**
+ *? При завантаженні сторінки користувачеві пропонується
+ *? в prompt ввести число. Введення додається до значення
+ *? змінної total.
+ *? Операція введення числа триває до того часу,
+ *? поки користувач не натисне кнопку Cancel у prompt.
+ *? Після того як користувач припинив введення, натиснувши на
+ *? кнопку Cancel, показати alert з рядком "Загальна сума введених чисел дорівнює [число]."
+ 
+ *! Робити перевірку, що користувач ввів саме число,
+ *! а не довільний набір символів не потрібно.
+ */
+
+let total = 0;
+
+let number = prompt('Input number');
+
+while (number !== null){
+   total+= Number(number);
+   number = prompt('Input number');
+
 }
+alert(total);
+
+
+
