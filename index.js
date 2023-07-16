@@ -134,8 +134,11 @@
 
 // console.log("Ввели число: ", number);
 
+// 3
+// let number = 0;
 
+// while (number <= 100) {
+//     number = prompt("Введіть число більше 100");
+// };
 
-
-
-
+// console.log("Ввели число: ", number);
