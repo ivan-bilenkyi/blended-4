@@ -87,23 +87,21 @@
  Python Гвідо ван Россум
 */
 
+// let lang = prompt("Автор мови програмування?").toLowerCase().trim();
 
-let lang = prompt("Назва мови програмування?").toLowerCase().trim();
 
+// switch (lang) {
+//     case "c#": console.log(`${lang} група інженерів компанії Microsoft під керівництвом Андерса Хейлсберга та Скотта Вільтаумота`);
+//         break;
+//     case "swift":
+//  console.log(`${lang} Кріс Латтнер`);
+//         break;
+//     case "js": 
+// console.log(`${lang} Брендан Ейх`);
+//         break;
+//     default: "Автор невідомий"
+// }
 
-switch (lang) {
-    case "c#": alert(`${lang} група інженерів компанії Microsoft під керівництвом Андерса Хейлсберга та Скотта Вільтаумота`);
-        break;
-    case "swift": alert(`${lang} Кріс Латтнер`);
-        break;
-    case "js": alert(`${lang} Брендан Ейх`);
-        break;
-    case "java": alert(`${lang} Джеймс Гослінг`);
-        break;
-    case "python": alert(`${lang} Гвідо ван Россум`);
-        break;
-    default: alert("Автор невідомий");
-}
 
 /**
  *? Напишите цикл, который предлагает ввести
@@ -116,14 +114,26 @@ switch (lang) {
  */
 
 
+// 1
+// let promptNumber = '';
 
-let number = "";
+// do {
+//      promptNumber = prompt('Enter a number greater hundred?');
+// }
+// while(promptNumber <= 100)
 
-do {
-    number = prompt("Введіть число більше 100", "");
-    } while (number <= 100 && number !== null);
+// alert('Thank You, you did it!');
 
-console.log("Ввели число: ", number);
+
+// 2
+// let number = "";
+
+// do {
+//     number = prompt("Введіть число більше 100", "");
+//     } while (number <= 100 && number !== null);
+
+// console.log("Ввели число: ", number);
+
 
 
 
