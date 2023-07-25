@@ -114,31 +114,31 @@
  */
 
 
-// 1
-// let promptNumber = '';
+1
+let promptNumber = '';
 
-// do {
-//      promptNumber = prompt('Enter a number greater hundred?');
-// }
-// while(promptNumber <= 100)
+do {
+     promptNumber = prompt('Enter a number greater hundred?');
+}
+while(promptNumber <= 100)
 
-// alert('Thank You, you did it!');
+alert('Thank You, you did it!');
 
 
-// 2
-// let number = "";
+2
+let number = "";
 
-// do {
-//     number = prompt("Введіть число більше 100", "");
-//     } while (number <= 100 && number !== null);
+do {
+    number = prompt("Введіть число більше 100", "");
+    } while (number <= 100 && number !== null);
 
-// console.log("Ввели число: ", number);
+console.log("Ввели число: ", number);
 
-// 3
-// let number = 0;
+3
+let number = 0;
 
-// while (number <= 100) {
-//     number = prompt("Введіть число більше 100");
-// };
+while (number <= 100) {
+    number = prompt("Введіть число більше 100");
+};
 
-// console.log("Ввели число: ", number);
+console.log("Ввели число: ", number);
