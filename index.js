@@ -114,31 +114,56 @@
  */
 
 
-1
-let promptNumber = '';
+// 1
+// let promptNumber = '';
+//
+// do {
+//      promptNumber = prompt('Enter a number greater hundred?');
+// }
+// while(promptNumber <= 100)
+//
+// alert('Thank You, you did it!');
+//
+//
+// 2
+// let number = "";
+//
+// do {
+//     number = prompt("Введіть число більше 100", "");
+//     } while (number <= 100 && number !== null);
+//
+// console.log("Ввели число: ", number);
+//
+// 3
+// let number = 0;
+//
+// while (number <= 100) {
+//     number = prompt("Введіть число більше 100");
+// };
+//
+// console.log("Ввели число: ", number);
 
-do {
-     promptNumber = prompt('Enter a number greater hundred?');
-}
-while(promptNumber <= 100)
+/* Напишіть функцію, яка приймає об'єкт і рахує загальну суму зарплат працівників. */
 
-alert('Thank You, you did it!');
-
-
-2
-let number = "";
-
-do {
-    number = prompt("Введіть число більше 100", "");
-    } while (number <= 100 && number !== null);
-
-console.log("Ввели число: ", number);
-
-3
-let number = 0;
-
-while (number <= 100) {
-    number = prompt("Введіть число більше 100");
+const someObj = {
+    worker1: 360,
+    worker2: 750,
+    worker3: 240,
 };
+function getTotalSal(obj) {
+    let sal = 0;
+    const val = Object.values(obj);
+    const keys = Object.keys(obj);
+    // for (const valElement of val) {
+    //     sal += valElement;
+    // }
+    // for (const objKey in obj) {
+    //     sal += obj[objKey];
+    // }
+    for(const key of keys) {
+        sal += obj[key];
+    }
+    return sal;
+}
 
-console.log("Ввели число: ", number);
+console.log(getTotalSal(someObj));
