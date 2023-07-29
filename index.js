@@ -30,8 +30,6 @@
 // min = min.padStart(2 , 0);
 // console.log(`${hours}:${min}`);
 
-
-
 /**
  *? Напишіть цикл, який виводить у консоль
  *? числа  від max до min  за спаданням
@@ -89,19 +87,17 @@
 
 // let lang = prompt("Автор мови програмування?").toLowerCase().trim();
 
-
 // switch (lang) {
 //     case "c#": console.log(`${lang} група інженерів компанії Microsoft під керівництвом Андерса Хейлсберга та Скотта Вільтаумота`);
 //         break;
 //     case "swift":
 //  console.log(`${lang} Кріс Латтнер`);
 //         break;
-//     case "js": 
+//     case "js":
 // console.log(`${lang} Брендан Ейх`);
 //         break;
 //     default: "Автор невідомий"
 // }
-
 
 /**
  *? Напишите цикл, который предлагает ввести
@@ -113,32 +109,49 @@
  *? Отмена в prompt
  */
 
+// 1
+// let promptNumber = '';
 
-1
-let promptNumber = '';
+// do {
+//      promptNumber = prompt('Enter a number greater hundred?');
+// }
+// while(promptNumber <= 100)
 
-do {
-     promptNumber = prompt('Enter a number greater hundred?');
+// alert('Thank You, you did it!');
+
+// 2
+// let number = "";
+
+// do {
+//     number = prompt("Введіть число більше 100", "");
+//     } while (number <= 100 && number !== null);
+
+// console.log("Ввели число: ", number);
+
+// 3
+// let number = 0;
+
+// while (number <= 100) {
+//     number = prompt("Введіть число більше 100");
+// };
+
+// console.log("Ввели число: ", number);
+
+// напиши код який із массиву arr видаляє елемент foo.
+// розвертає цей массив
+// і повертає рядок js is the best
+// вхідний массив не має змінюватись (мутується)
+
+const arr = ["best", "the", "foo", "is", "js"];
+
+function deleteWord(array, string) {
+  const copyArray = [...array];
+  const idx = copyArray.indexOf(string);
+  //   console.log(idx);
+  copyArray.splice(idx, 1);
+  copyArray.reverse();
+  return copyArray.join(" ");
 }
-while(promptNumber <= 100)
 
-alert('Thank You, you did it!');
-
-
-2
-let number = "";
-
-do {
-    number = prompt("Введіть число більше 100", "");
-    } while (number <= 100 && number !== null);
-
-console.log("Ввели число: ", number);
-
-3
-let number = 0;
-
-while (number <= 100) {
-    number = prompt("Введіть число більше 100");
-};
-
-console.log("Ввели число: ", number);
+console.log(deleteWord(arr, "foo"));
+console.log(arr);
