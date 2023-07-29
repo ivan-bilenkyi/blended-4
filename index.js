@@ -155,3 +155,19 @@ function deleteWord(array, string) {
 
 console.log(deleteWord(arr, "foo"));
 console.log(arr);
+
+// второе решение
+
+function methodName(arr, element) {
+  if (arr.includes(element)) {
+    return arr
+      .slice(0, arr.indexOf(element))
+      .concat(arr.slice(arr.indexOf(element) + 1, arr.length))
+      .reverse()
+      .join(" ");
+  }
+
+  return "not found";
+}
+
+console.log(methodName(arr, "fooasd"));
