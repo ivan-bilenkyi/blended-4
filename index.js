@@ -30,8 +30,6 @@
 // min = min.padStart(2 , 0);
 // console.log(`${hours}:${min}`);
 
-
-
 /**
  *? Напишіть цикл, який виводить у консоль
  *? числа  від max до min  за спаданням
@@ -89,19 +87,17 @@
 
 // let lang = prompt("Автор мови програмування?").toLowerCase().trim();
 
-
 // switch (lang) {
 //     case "c#": console.log(`${lang} група інженерів компанії Microsoft під керівництвом Андерса Хейлсберга та Скотта Вільтаумота`);
 //         break;
 //     case "swift":
 //  console.log(`${lang} Кріс Латтнер`);
 //         break;
-//     case "js": 
+//     case "js":
 // console.log(`${lang} Брендан Ейх`);
 //         break;
 //     default: "Автор невідомий"
 // }
-
 
 /**
  *? Напишите цикл, который предлагает ввести
@@ -112,6 +108,44 @@
  *? введёт число больше 100, либо не нажмет кнопку
  *? Отмена в prompt
  */
+
+// 1
+// let promptNumber = '';
+
+
+// do {
+//      promptNumber = prompt('Enter a number greater hundred?');
+// }
+// while(promptNumber <= 100)
+
+
+// 1
+// let promptNumber = '';
+
+// do {
+//      promptNumber = prompt('Enter a number greater hundred?');
+// }
+// while(promptNumber <= 100)
+
+// alert('Thank You, you did it!');
+
+
+// 2
+// let number = "";
+
+// do {
+//     number = prompt("Введіть число більше 100", "");
+//     } while (number <= 100 && number !== null);
+
+// console.log("Ввели число: ", number);
+
+// 3
+// let number = 0;
+
+// do {
+//     number = prompt("Введіть число більше 100", "");
+//     } while (number <= 100 && number !== null);
+
 
 
 // 1
@@ -149,21 +183,198 @@
 // *? Надайте ід для кожного продукту
 // */
 
-const fruits = [
-  { name: "apple", price: 200 },
-  { name: "orange", price: 300 },
-  { name: "grapes", price: 750 },
-];
+// const fruits = [
+//   { name: "apple", price: 200 },
+//   { name: "orange", price: 300 },
+//   { name: "grapes", price: 750 },
+// ];
 
-function getArray(array) {
-    const newFruits = [...array];
-    let id = 1;
-    for (const item of newFruits) {
-        item.price = 0.8 * item.price;
-        item.id = id;
-        id++;
-    }
-    return newFruits;
-}
+// function getArray(array) {
+//     const newFruits = [...array];
+//     let id = 1;
+//     for (const item of newFruits) {
+//         item.price = 0.8 * item.price;
+//         item.id = id;
+//         id++;
+//     }
+//     return newFruits;
+// }
 
-console.log( getArray(fruits));
+// console.log( getArray(fruits));
+
+
+// console.log("Ввели число: ", number);
+
+// 3
+// let number = 0;
+
+// while (number <= 100) {
+//     number = prompt("Введіть число більше 100");
+// };
+
+// console.log("Ввели число: ", number);
+
+
+// напиши код який із массиву arr видаляє елемент foo.
+// розвертає цей массив
+// і повертає рядок js is the best
+// вхідний массив не має змінюватись (мутується)
+
+// const arr = ["best", "the", "foo", "is", "js"];
+
+// function deleteWord(array, string) {
+//   const copyArray = [...array];
+//   const idx = copyArray.indexOf(string);
+//   //   console.log(idx);
+//   copyArray.splice(idx, 1);
+//   copyArray.reverse();
+//   return copyArray.join(" ");
+// }
+
+// console.log(deleteWord(arr, "foo"));
+// console.log(arr);
+
+// // второе решение
+
+// function methodName(arr, element) {
+//   if (arr.includes(element)) {
+//     return arr
+//       .slice(0, arr.indexOf(element))
+//       .concat(arr.slice(arr.indexOf(element) + 1, arr.length))
+//       .reverse()
+//       .join(" ");
+//   }
+
+//   return "not found";
+// }
+
+// console.log(methodName(arr, "fooasd"));
+
+// Напишит функцію, яка приймає два аргументи (массив рядків і рядок), перевіряє чи є такий рядок у масиві.
+// якщо такий рядок знайдено у массиві, потрібно утворити з нього массив, розвернути і повернути із функції
+// якщо такого рядку немає то потрібно повернути рядок "Not found 🙄"
+
+// const arr = ["aPple", "bananA", "cHerry", "Orange"];
+// function findString(array, string) {
+//   for (const item of array) {
+//     if (item.toLowerCase() === string.toLowerCase()) {
+//       return item.split("").reverse();
+//     }
+//   }
+//   return "Not found 🙄";
+// }
+
+// console.log(findString(arr, "bananA"));
+
+// while (number <= 100) {
+//     number = prompt("Введіть число більше 100");
+// };
+
+// console.log("Ввели число: ", number);
+
+/**
+
+ *? Напишіть ф-цію calcTotalPrice(someStones, stonesName),
+
+ *? яка приймає масив об'єктів та
+
+ *? рядок під назвою каменю.
+
+ *? Функція рахує та повертає загальну вартість каменів
+
+ *? з таким ім'ям, ціною та кількістю з об'єкта
+
+ */
+
+ 
+
+// const stones = [
+
+//    { name: "Изумруд", price: 1300, quantity: 4 },
+
+//    { name: "Бриллиант", price: 2700, quantity: 6 },
+
+//    { name: "Сапфир", price: 400, quantity: 7 },
+
+//    { name: "Щебень", price: 150, quantity: 100 },
+
+//  ];
+
+// const array = [
+
+//   { name: "Изумруд", price: 1300, quantity: 4 },
+
+//   { name: "Бриллиант", price: 2700, quantity: 6 },
+
+//   { name: "Сапфир", price: 500, quantity: 7 },
+
+//   { name: "Щебень", price: 150, quantity: 100 },
+
+// ];
+
+// function calcTotalPrice(someStones, stonesName) {
+//     for (const stone of someStones) {
+//         if (stone.name === stonesName) {
+//             return stone.price * stone.quantity;
+//         }
+//     }
+
+//     return "камінь не знайдено";
+// }
+
+// console.log(calcTotalPrice(stones, "Сапфир"))
+// console.log(calcTotalPrice(array, "Изумруд"))
+
+
+// while (number <= 100) {
+//     number = prompt("Введіть число більше 100");
+// };
+
+// console.log("Ввели число: ", number);
+
+/**
+ *? Напиши скрипт для об'єкта user,
+ *? послідовно:
+ *? 1 додати поле mood зі значенням 'happy'
+ *? 2 замінить hobby на 'skydiving'
+ *? 3 замінить значення premium на false
+ *? 4 виводить вміст об'єкта users у форматі
+ *? ключ: значення використовуючи Object.keys() і for...of
+ */
+
+// const user = {
+//   name: "John",
+//   age: 20,
+//   hobby: "tennis",
+//   premium: true,
+
+// };
+// function getTotalSal(obj) {
+//     let sal = 0;
+//     const val = Object.values(obj);
+//     const keys = Object.keys(obj);
+//     // for (const valElement of val) {
+//     //     sal += valElement;
+//     // }
+//     // for (const objKey in obj) {
+//     //     sal += obj[objKey];
+//     // }
+//     for(const key of keys) {
+//         sal += obj[key];
+//     }
+//     return sal;
+// }
+// console.log(getTotalSal(someObj));
+
+
+// user.mood = "happy";
+// user.hobby = "skydiving";
+// user.premium = false;
+
+// const keys = Object.keys(user);
+// console.log(keys);
+
+// for (const key of keys) {
+//   console.log(`${key}: ${user[key]}`);
+// }
+
