@@ -148,6 +148,61 @@
 
 
 
+// 1
+// let promptNumber = '';
+
+// do {
+//      promptNumber = prompt('Enter a number greater hundred?');
+// }
+// while(promptNumber <= 100)
+
+// alert('Thank You, you did it!');
+
+
+// 2
+// let number = "";
+
+// do {
+//     number = prompt("Введіть число більше 100", "");
+//     } while (number <= 100 && number !== null);
+
+// console.log("Ввели число: ", number);
+
+// 3
+// let number = 0;
+
+// while (number <= 100) {
+//     number = prompt("Введіть число більше 100");
+// };
+
+// console.log("Ввели число: ", number);
+
+///**
+// *? Напишіть функцію, яка приймає массив об'єктів і повертає новий массив
+// *? Зробіть знижку 20 % на всі фрукти у масиві
+// *? Надайте ід для кожного продукту
+// */
+
+// const fruits = [
+//   { name: "apple", price: 200 },
+//   { name: "orange", price: 300 },
+//   { name: "grapes", price: 750 },
+// ];
+
+// function getArray(array) {
+//     const newFruits = [...array];
+//     let id = 1;
+//     for (const item of newFruits) {
+//         item.price = 0.8 * item.price;
+//         item.id = id;
+//         id++;
+//     }
+//     return newFruits;
+// }
+
+// console.log( getArray(fruits));
+
+
 // console.log("Ввели число: ", number);
 
 // 3
