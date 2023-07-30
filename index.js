@@ -30,8 +30,6 @@
 // min = min.padStart(2 , 0);
 // console.log(`${hours}:${min}`);
 
-
-
 /**
  *? Напишіть цикл, який виводить у консоль
  *? числа  від max до min  за спаданням
@@ -89,19 +87,17 @@
 
 // let lang = prompt("Автор мови програмування?").toLowerCase().trim();
 
-
 // switch (lang) {
 //     case "c#": console.log(`${lang} група інженерів компанії Microsoft під керівництвом Андерса Хейлсберга та Скотта Вільтаумота`);
 //         break;
 //     case "swift":
 //  console.log(`${lang} Кріс Латтнер`);
 //         break;
-//     case "js": 
+//     case "js":
 // console.log(`${lang} Брендан Ейх`);
 //         break;
 //     default: "Автор невідомий"
 // }
-
 
 /**
  *? Напишите цикл, который предлагает ввести
@@ -112,6 +108,14 @@
  *? введёт число больше 100, либо не нажмет кнопку
  *? Отмена в prompt
  */
+
+// 1
+// let promptNumber = '';
+
+// do {
+//      promptNumber = prompt('Enter a number greater hundred?');
+// }
+// while(promptNumber <= 100)
 
 
 // 1
@@ -137,6 +141,7 @@
 // 3
 // let number = 0;
 
+
 // while (number <= 100) {
 //     number = prompt("Введіть число більше 100");
 // };
@@ -159,39 +164,93 @@
 
  
 
-const stones = [
+// const stones = [
 
-   { name: "Изумруд", price: 1300, quantity: 4 },
+//    { name: "Изумруд", price: 1300, quantity: 4 },
 
-   { name: "Бриллиант", price: 2700, quantity: 6 },
+//    { name: "Бриллиант", price: 2700, quantity: 6 },
 
-   { name: "Сапфир", price: 400, quantity: 7 },
+//    { name: "Сапфир", price: 400, quantity: 7 },
 
-   { name: "Щебень", price: 150, quantity: 100 },
+//    { name: "Щебень", price: 150, quantity: 100 },
 
- ];
+//  ];
 
-const array = [
+// const array = [
 
-  { name: "Изумруд", price: 1300, quantity: 4 },
+//   { name: "Изумруд", price: 1300, quantity: 4 },
 
-  { name: "Бриллиант", price: 2700, quantity: 6 },
+//   { name: "Бриллиант", price: 2700, quantity: 6 },
 
-  { name: "Сапфир", price: 500, quantity: 7 },
+//   { name: "Сапфир", price: 500, quantity: 7 },
 
-  { name: "Щебень", price: 150, quantity: 100 },
+//   { name: "Щебень", price: 150, quantity: 100 },
 
-];
+// ];
 
-function calcTotalPrice(someStones, stonesName) {
-    for (const stone of someStones) {
-        if (stone.name === stonesName) {
-            return stone.price * stone.quantity;
-        }
-    }
+// function calcTotalPrice(someStones, stonesName) {
+//     for (const stone of someStones) {
+//         if (stone.name === stonesName) {
+//             return stone.price * stone.quantity;
+//         }
+//     }
 
-    return "камінь не знайдено";
-}
+//     return "камінь не знайдено";
+// }
 
-console.log(calcTotalPrice(stones, "Сапфир"))
-console.log(calcTotalPrice(array, "Изумруд"))
+// console.log(calcTotalPrice(stones, "Сапфир"))
+// console.log(calcTotalPrice(array, "Изумруд"))
+
+
+// while (number <= 100) {
+//     number = prompt("Введіть число більше 100");
+// };
+
+// console.log("Ввели число: ", number);
+
+/**
+ *? Напиши скрипт для об'єкта user,
+ *? послідовно:
+ *? 1 додати поле mood зі значенням 'happy'
+ *? 2 замінить hobby на 'skydiving'
+ *? 3 замінить значення premium на false
+ *? 4 виводить вміст об'єкта users у форматі
+ *? ключ: значення використовуючи Object.keys() і for...of
+ */
+
+// const user = {
+//   name: "John",
+//   age: 20,
+//   hobby: "tennis",
+//   premium: true,
+
+// };
+// function getTotalSal(obj) {
+//     let sal = 0;
+//     const val = Object.values(obj);
+//     const keys = Object.keys(obj);
+//     // for (const valElement of val) {
+//     //     sal += valElement;
+//     // }
+//     // for (const objKey in obj) {
+//     //     sal += obj[objKey];
+//     // }
+//     for(const key of keys) {
+//         sal += obj[key];
+//     }
+//     return sal;
+// }
+// console.log(getTotalSal(someObj));
+
+
+// user.mood = "happy";
+// user.hobby = "skydiving";
+// user.premium = false;
+
+// const keys = Object.keys(user);
+// console.log(keys);
+
+// for (const key of keys) {
+//   console.log(`${key}: ${user[key]}`);
+// }
+
