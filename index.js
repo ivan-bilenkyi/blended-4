@@ -147,6 +147,7 @@
 //     } while (number <= 100 && number !== null);
 
 
+
 // console.log("Ввели число: ", number);
 
 // 3
@@ -157,6 +158,42 @@
 // };
 
 // console.log("Ввели число: ", number);
+
+
+// напиши код який із массиву arr видаляє елемент foo.
+// розвертає цей массив
+// і повертає рядок js is the best
+// вхідний массив не має змінюватись (мутується)
+
+// const arr = ["best", "the", "foo", "is", "js"];
+
+// function deleteWord(array, string) {
+//   const copyArray = [...array];
+//   const idx = copyArray.indexOf(string);
+//   //   console.log(idx);
+//   copyArray.splice(idx, 1);
+//   copyArray.reverse();
+//   return copyArray.join(" ");
+// }
+
+// console.log(deleteWord(arr, "foo"));
+// console.log(arr);
+
+// // второе решение
+
+// function methodName(arr, element) {
+//   if (arr.includes(element)) {
+//     return arr
+//       .slice(0, arr.indexOf(element))
+//       .concat(arr.slice(arr.indexOf(element) + 1, arr.length))
+//       .reverse()
+//       .join(" ");
+//   }
+
+//   return "not found";
+// }
+
+// console.log(methodName(arr, "fooasd"));
 
 // Напишит функцію, яка приймає два аргументи (массив рядків і рядок), перевіряє чи є такий рядок у масиві.
 // якщо такий рядок знайдено у массиві, потрібно утворити з нього массив, розвернути і повернути із функції
