@@ -118,7 +118,16 @@
 // while(promptNumber <= 100)
 
 
+// 1
+// let promptNumber = '';
+
+// do {
+//      promptNumber = prompt('Enter a number greater hundred?');
+// }
+// while(promptNumber <= 100)
+
 // alert('Thank You, you did it!');
+
 
 // 2
 // let number = "";
@@ -131,6 +140,67 @@
 
 // 3
 // let number = 0;
+
+
+// while (number <= 100) {
+//     number = prompt("Введіть число більше 100");
+// };
+
+// console.log("Ввели число: ", number);
+
+/**
+
+ *? Напишіть ф-цію calcTotalPrice(someStones, stonesName),
+
+ *? яка приймає масив об'єктів та
+
+ *? рядок під назвою каменю.
+
+ *? Функція рахує та повертає загальну вартість каменів
+
+ *? з таким ім'ям, ціною та кількістю з об'єкта
+
+ */
+
+ 
+
+// const stones = [
+
+//    { name: "Изумруд", price: 1300, quantity: 4 },
+
+//    { name: "Бриллиант", price: 2700, quantity: 6 },
+
+//    { name: "Сапфир", price: 400, quantity: 7 },
+
+//    { name: "Щебень", price: 150, quantity: 100 },
+
+//  ];
+
+// const array = [
+
+//   { name: "Изумруд", price: 1300, quantity: 4 },
+
+//   { name: "Бриллиант", price: 2700, quantity: 6 },
+
+//   { name: "Сапфир", price: 500, quantity: 7 },
+
+//   { name: "Щебень", price: 150, quantity: 100 },
+
+// ];
+
+// function calcTotalPrice(someStones, stonesName) {
+//     for (const stone of someStones) {
+//         if (stone.name === stonesName) {
+//             return stone.price * stone.quantity;
+//         }
+//     }
+
+//     return "камінь не знайдено";
+// }
+
+// console.log(calcTotalPrice(stones, "Сапфир"))
+// console.log(calcTotalPrice(array, "Изумруд"))
+
 
 // while (number <= 100) {
 //     number = prompt("Введіть число більше 100");
