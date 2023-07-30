@@ -117,6 +117,7 @@
 // }
 // while(promptNumber <= 100)
 
+
 // alert('Thank You, you did it!');
 
 // 2
@@ -147,20 +148,39 @@
  *? ключ: значення використовуючи Object.keys() і for...of
  */
 
-const user = {
-  name: "John",
-  age: 20,
-  hobby: "tennis",
-  premium: true,
-};
+// const user = {
+//   name: "John",
+//   age: 20,
+//   hobby: "tennis",
+//   premium: true,
 
-user.mood = "happy";
-user.hobby = "skydiving";
-user.premium = false;
+// };
+// function getTotalSal(obj) {
+//     let sal = 0;
+//     const val = Object.values(obj);
+//     const keys = Object.keys(obj);
+//     // for (const valElement of val) {
+//     //     sal += valElement;
+//     // }
+//     // for (const objKey in obj) {
+//     //     sal += obj[objKey];
+//     // }
+//     for(const key of keys) {
+//         sal += obj[key];
+//     }
+//     return sal;
+// }
+// console.log(getTotalSal(someObj));
 
-const keys = Object.keys(user);
-console.log(keys);
 
-for (const key of keys) {
-  console.log(`${key}: ${user[key]}`);
-}
+// user.mood = "happy";
+// user.hobby = "skydiving";
+// user.premium = false;
+
+// const keys = Object.keys(user);
+// console.log(keys);
+
+// for (const key of keys) {
+//   console.log(`${key}: ${user[key]}`);
+// }
+
