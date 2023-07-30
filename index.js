@@ -30,8 +30,6 @@
 // min = min.padStart(2 , 0);
 // console.log(`${hours}:${min}`);
 
-
-
 /**
  *? Напишіть цикл, який виводить у консоль
  *? числа  від max до min  за спаданням
@@ -89,19 +87,17 @@
 
 // let lang = prompt("Автор мови програмування?").toLowerCase().trim();
 
-
 // switch (lang) {
 //     case "c#": console.log(`${lang} група інженерів компанії Microsoft під керівництвом Андерса Хейлсберга та Скотта Вільтаумота`);
 //         break;
 //     case "swift":
 //  console.log(`${lang} Кріс Латтнер`);
 //         break;
-//     case "js": 
+//     case "js":
 // console.log(`${lang} Брендан Ейх`);
 //         break;
 //     default: "Автор невідомий"
 // }
-
 
 /**
  *? Напишите цикл, который предлагает ввести
@@ -113,32 +109,58 @@
  *? Отмена в prompt
  */
 
+// 1
+// let promptNumber = '';
 
-1
-let promptNumber = '';
+// do {
+//      promptNumber = prompt('Enter a number greater hundred?');
+// }
+// while(promptNumber <= 100)
 
-do {
-     promptNumber = prompt('Enter a number greater hundred?');
-}
-while(promptNumber <= 100)
+// alert('Thank You, you did it!');
 
-alert('Thank You, you did it!');
+// 2
+// let number = "";
 
+// do {
+//     number = prompt("Введіть число більше 100", "");
+//     } while (number <= 100 && number !== null);
 
-2
-let number = "";
+// console.log("Ввели число: ", number);
 
-do {
-    number = prompt("Введіть число більше 100", "");
-    } while (number <= 100 && number !== null);
+// 3
+// let number = 0;
 
-console.log("Ввели число: ", number);
+// while (number <= 100) {
+//     number = prompt("Введіть число більше 100");
+// };
 
-3
-let number = 0;
+// console.log("Ввели число: ", number);
 
-while (number <= 100) {
-    number = prompt("Введіть число більше 100");
+/**
+ *? Напиши скрипт для об'єкта user,
+ *? послідовно:
+ *? 1 додати поле mood зі значенням 'happy'
+ *? 2 замінить hobby на 'skydiving'
+ *? 3 замінить значення premium на false
+ *? 4 виводить вміст об'єкта users у форматі
+ *? ключ: значення використовуючи Object.keys() і for...of
+ */
+
+const user = {
+  name: "John",
+  age: 20,
+  hobby: "tennis",
+  premium: true,
 };
 
-console.log("Ввели число: ", number);
+user.mood = "happy";
+user.hobby = "skydiving";
+user.premium = false;
+
+const keys = Object.keys(user);
+console.log(keys);
+
+for (const key of keys) {
+  console.log(`${key}: ${user[key]}`);
+}
