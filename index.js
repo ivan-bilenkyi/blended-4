@@ -366,50 +366,48 @@
 //   console.log(`${key}: ${user[key]}`);
 // }
 
+// //TODO:==============================================
+// /**
+// *? Поверніть об'єкт, в якому вказано кількість тегів.
+// *? Очікуваний результат {js: 3, nodejs: 3, html: 2, css: 2, react: 2}
+// */
 
-//TODO:==============================================
-/**
-*? Поверніть об'єкт, в якому вказано кількість тегів.
-*? Очікуваний результат {js: 3, nodejs: 3, html: 2, css: 2, react: 2}
-*/
+// const tweets = [
+//   { id: "000", likes: 5, tags: ["js", "nodejs"] },
+//   { id: "001", likes: 2, tags: ["html", "css"] },
+//   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+//   { id: "003", likes: 8, tags: ["css", "react"] },
+//   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+// ];
 
-const tweets = [
-  { id: "000", likes: 5, tags: ["js", "nodejs"] },
-  { id: "001", likes: 2, tags: ["html", "css"] },
-  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
-  { id: "003", likes: 8, tags: ["css", "react"] },
-  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
-];
+// const tags = tweets.flatMap(item => item.tags)
+//   .reduce((acc, item) => { return {...acc, [item]:acc[item]?acc[item]+1:1} }, {})
 
-const tags = tweets.flatMap(item => item.tags)
-  .reduce((acc, item) => { return {...acc, [item]:acc[item]?acc[item]+1:1} }, {})
+// console.log(tags)
 
-console.log(tags)
+// /**
+//  *? З об'єкту concerts потрібно отримати масив
+//  *? в якому будуть лише імена міст.
+//  *? З масиву потрібно прибрати міста, в яких концерт уже пройшов і
+//  *? відсортувати їх у хронологічному порядку.
+//  *? Результат вивести у консоль.
+//  *? Очікуваний результат ["Одеса", "Умань", "Харків"]
+//  */
+// const concerts = {
+//     Київ: new Date("2020-04-01"),
+//     Умань: new Date("2025-07-02"),
+//     Вінниця: new Date("2020-04-21"),
+//     Одеса: new Date("2025-03-15"),
+//     Хмельницький: new Date("2020-04-18"),
+//     Харків: new Date("2025-07-10"),
+// };
 
+// // const cityNames = Object.keys(concerts);
+// const filterCitiesName =  Object.keys(concerts)
+//     .filter(el => concerts[el] > new Date())
+//     .sort((a, b) => concerts[a] - concerts[b]);
 
-/**
- *? З об'єкту concerts потрібно отримати масив
- *? в якому будуть лише імена міст.
- *? З масиву потрібно прибрати міста, в яких концерт уже пройшов і
- *? відсортувати їх у хронологічному порядку.
- *? Результат вивести у консоль.
- *? Очікуваний результат ["Одеса", "Умань", "Харків"]
- */
-const concerts = {
-    Київ: new Date("2020-04-01"),
-    Умань: new Date("2025-07-02"),
-    Вінниця: new Date("2020-04-21"),
-    Одеса: new Date("2025-03-15"),
-    Хмельницький: new Date("2020-04-18"),
-    Харків: new Date("2025-07-10"),
-};
-
-// const cityNames = Object.keys(concerts);
-const filterCitiesName =  Object.keys(concerts)
-    .filter(el => concerts[el] > new Date())
-    .sort((a, b) => concerts[a] - concerts[b]);
-
-console.log(filterCitiesName)
+// console.log(filterCitiesName)
 
 // ///**
 // // *? Напишіть функцію, яка приймає массив об'єктів і повертає новий массив
@@ -431,4 +429,43 @@ console.log(filterCitiesName)
 //   }));
 // console.log(updateFruit(fruits));
 
+//TODO:=============================================
+/**
+ *? Напиши функцію конструктор Storage який створює об'єкти
+ *? Для управління складом товарів.
+ *? При виклику отримуватиме один агрумент - початковий масив товарів,
+ *? і записувати їх у властивість items.
+ *? Додай методи класу:
+ *? getItems() - повертайте масив товарів
+ *? addItems(item) - отримує новий товар та додає його до поточних
+ *? removeItem(item) - отримує товар і, якщо він є, видаляє його з поточних
+ */
 
+// const arr = ["apple", "banana", "mango"];
+
+// const Storage = function (array) {
+//   this.items = array;
+
+//   //   this.getItems = function () {
+//   //     return this.items;
+//   //   };
+
+//   this.addItems = function (item) {
+//     this.items.push(item);
+//   };
+
+//   this.removeItem = function (item) {
+//     const indexItem = this.items.indexOf(item);
+//     if (indexItem !== -1) {
+//       this.items.splice(indexItem, 1);
+//     }
+//   };
+// };
+
+// Storage.prototype.getItem = function () {
+//   return this.items;
+// };
+
+// const storage = new Storage(arr);
+// storage.removeItem("qwertyt");
+// console.log(storage);
