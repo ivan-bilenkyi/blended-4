@@ -112,12 +112,10 @@
 // 1
 // let promptNumber = '';
 
-
 // do {
 //      promptNumber = prompt('Enter a number greater hundred?');
 // }
 // while(promptNumber <= 100)
-
 
 // 1
 // let promptNumber = '';
@@ -128,7 +126,6 @@
 // while(promptNumber <= 100)
 
 // alert('Thank You, you did it!');
-
 
 // 2
 // let number = "";
@@ -146,8 +143,6 @@
 //     number = prompt("Введіть число більше 100", "");
 //     } while (number <= 100 && number !== null);
 
-
-
 // 1
 // let promptNumber = '';
 
@@ -157,7 +152,6 @@
 // while(promptNumber <= 100)
 
 // alert('Thank You, you did it!');
-
 
 // 2
 // let number = "";
@@ -202,7 +196,6 @@
 
 // console.log( getArray(fruits));
 
-
 // console.log("Ввели число: ", number);
 
 // 3
@@ -213,7 +206,6 @@
 // };
 
 // console.log("Ввели число: ", number);
-
 
 // напиши код який із массиву arr видаляє елемент foo.
 // розвертає цей массив
@@ -286,8 +278,6 @@
 
  */
 
- 
-
 // const stones = [
 
 //    { name: "Изумруд", price: 1300, quantity: 4 },
@@ -324,7 +314,6 @@
 
 // console.log(calcTotalPrice(stones, "Сапфир"))
 // console.log(calcTotalPrice(array, "Изумруд"))
-
 
 // while (number <= 100) {
 //     number = prompt("Введіть число більше 100");
@@ -366,7 +355,6 @@
 // }
 // console.log(getTotalSal(someObj));
 
-
 // user.mood = "happy";
 // user.hobby = "skydiving";
 // user.premium = false;
@@ -378,3 +366,22 @@
 //   console.log(`${key}: ${user[key]}`);
 // }
 
+// ///**
+// // *? Напишіть функцію, яка приймає массив об'єктів і повертає новий массив
+// // *? Зробіть знижку 20 % на всі фрукти у масиві
+// // *? Надайте ід для кожного продукту
+// // */
+
+// const fruits = [
+//   { name: "apple", price: 200 },
+//   { name: "orange", price: 300 },
+//   { name: "grapes", price: 750 },
+// ];
+
+// const updateFruit = (fruitsArray) =>
+//   fruitsArray.map((fruit, index) => ({
+//     ...fruit,
+//     price: fruit.price * 0.8,
+//     id: index + 1,
+//   }));
+// console.log(updateFruit(fruits));
