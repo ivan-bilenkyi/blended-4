@@ -523,4 +523,21 @@ const someFn = `function foo() {
   console.log(arr);
 }`;
 
+function checkBrackets(someFn) {
+  const array = someFn.split("");
+
+  const idx1 = array.indexOf("(");
+  const idx2 = array.indexOf(")");
+  const idx3 = array.indexOf("3");
+  const idx4 = array.indexOf("]");
+  const idx5 = array.indexOf("g");
+   
+  return array.some(item => idx1 + 1 === idx2) &&
+    array.some(item => idx3 + 1 === idx4) &&
+    array.some((item, index, arr) => idx5 + 5 === arr.length - 4) &&
+    array.some((item, index, arr) => arr.indexOf(item) === arr.length - 1);
+
+}
+  
 console.log(checkBrackets(someFn));
+
