@@ -518,26 +518,214 @@
   В іншому випадку повертає false
 */
 
+// const someFn = `function foo() {
+//   const arr = [1, 2, 3];
+//   console.log(arr);
+// }`;
+
+// const example = [
+//     ['(',')'],
+//     ['{','}'],
+//     ['[',']']
+// ];
+
+// function checkBrackets(str) {
+//     const stringArr = [...str];
+//     let test = [];
+//     for(let els of example) {
+//         for(let char of els) {
+//             foo(char, stringArr, test)
+//         }
+//     }
+//     let result = getBool(example, test);
+//
+//     return result
+// }
+//
+// function foo(el, strArr, newArr) {
+//     if (strArr.includes(el)) {
+//         const ind = strArr.indexOf(el);
+//         strArr.splice(ind, 1);
+//         newArr.push({char: el, index: ind});
+//         if (strArr.includes(el)) {
+//             foo(el, strArr, newArr);
+//         }
+//     }
+// }
+//
+// function checkBrackets(someFn) {
+//   const array = someFn.split("");
+//
+//   const idx1 = array.indexOf("(");
+//   const idx2 = array.indexOf(")");
+//   const idx3 = array.indexOf("3");
+//   const idx4 = array.indexOf("]");
+//   const idx5 = array.indexOf("g");
+//
+//   return array.some(item => idx1 + 1 === idx2) &&
+//     array.some(item => idx3 + 1 === idx4) &&
+//     array.some((item, index, arr) => idx5 + 5 === arr.length - 4) &&
+//     array.some((item, index, arr) => arr.indexOf(item) === arr.length - 1);
+//
+// }
+//
+// console.log(checkBrackets(someFn));
+// function getBool(arr1, arr2) {
+//     for(let el of arr1) {
+//         let counterFirst = 0;
+//         let counterSecond = 0;
+//         for (const i of arr2) {
+//             if (i.char === el[0]) {
+//                 counterFirst++;
+//             }
+//             if (i.char === el[1]){
+//                 counterSecond++;
+//             }
+//         }
+//         if (counterFirst !== counterSecond) {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+//
+// function final(a, b, arr) {
+//     let indexA = 0;
+//     let indexB = 0;
+//     for (const arrElement of arr) {
+//         if (arrElement.char === a) {
+//             indexA = arrElement.index;
+//             arr.splice(arr.indexOf(arrElement), 1);
+//             break;
+//         }
+//     }
+//     for (const arrElement of arr) {
+//         if (arrElement.char === b) {
+//             indexB = arrElement.index;
+//             arr.splice(arr.indexOf(arrElement), 1);
+//             break;
+//         }
+//     }
+//     return indexB >= indexA;
+// }
+// const tags = tweets.flatMap(item => item.tags)
+//   .reduce((acc, item) => {
+//       return {
+//           ...acc,
+//           [item]:acc[item]?acc[item]+1:1
+//       }
+//   }, {})
+
+// console.log(tags)
+// console.log(checkBrackets(someFn));
+
+// const example = [['(',')'],['{','}'],['[',']']]
+//
+// function checkBrackets(str) {
+//     const stringArr = [...str];
+//     let arr = [];
+//     for(let elements of example) {
+//         for(let char of elements) {
+//             setElements(char, stringArr, arr)
+//         }
+//     }
+//     let result = getBool(example, arr);
+//     check(example, arr)
+//     return arr
+// }
+//
+//
+// function setElements(el, strArr, newArr) {
+//     if (strArr.includes(el)) {
+//         const ind = strArr.indexOf(el);
+//         strArr.splice(ind, 1);
+//         newArr.push({char: el, index: ind});
+//         if (strArr.includes(el)) {
+//             setElements(el, strArr, newArr);
+//         }
+//     }
+// }
+//
+// function getBool(arr1, arr2) {
+//     for(let el of arr1) {
+//         let counterFirst = 0;
+//         let counterSecond = 0;
+//         for (const i of arr2) {
+//             if (i.char === el[0]) {
+//                 counterFirst++;
+//             }
+//             if (i.char === el[1]){
+//                 counterSecond++;
+//             }
+//         }
+//         if (counterFirst !== counterSecond) {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+//
+// function check(exampleArr, arr) {
+//     const newArr = arr.map(item => item);
+//     let firstIndex = 0;
+//     let lastIndex = 0
+//     let result = false;
+//
+//     for (const item in exampleArr) {
+//         let count = 0;
+//         for (const obj in newArr) {
+//             if (item[0] === obj.char ){
+//                 firstIndex = obj.index;
+//                 newArr.splice(count, 1);
+//                 break;
+//             }
+//         }
+//         for (const obj in newArr) {
+//             if (item[1] === obj.char ){
+//                 lastIndex = obj.index;
+//                 newArr.splice(count, 1);
+//                 break;
+//             }
+//         }
+//         if (lastIndex > firstIndex) {
+//             result = true;
+//         } else {
+//             result = false;
+//         }
+//     }
+//     console.log(result)
+//     console.log(newArr)
+// }
+//
+// console.log(checkBrackets(someFn))
+
+// function checkBrackets(str) {
+//     const stack = [];
+//     const openingBrackets = '({[';
+//     const closingBrackets = ')}]';
+//     const bracketPairs = {
+//         ')': '(',
+//         '}': '{',
+//         ']': '[',
+//     };
+//
+//     for (const char of str) {
+//         if (openingBrackets.includes(char)) {
+//             stack.push(char);
+//         } else if (closingBrackets.includes(char)) {
+//             const lastOpeningBracket = stack.pop();
+//             if (lastOpeningBracket !== bracketPairs[char]) {
+//                 return false;
+//             }
+//         }
+//     }
+//
+//     return stack.length === 0;
+}
+
 const someFn = `function foo() {
   const arr = [1, 2, 3];
   console.log(arr);
 }`;
 
-function checkBrackets(someFn) {
-  const array = someFn.split("");
-
-  const idx1 = array.indexOf("(");
-  const idx2 = array.indexOf(")");
-  const idx3 = array.indexOf("3");
-  const idx4 = array.indexOf("]");
-  const idx5 = array.indexOf("g");
-   
-  return array.some(item => idx1 + 1 === idx2) &&
-    array.some(item => idx3 + 1 === idx4) &&
-    array.some((item, index, arr) => idx5 + 5 === arr.length - 4) &&
-    array.some((item, index, arr) => arr.indexOf(item) === arr.length - 1);
-
-}
-  
 console.log(checkBrackets(someFn));
-
