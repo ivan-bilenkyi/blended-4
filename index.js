@@ -366,30 +366,48 @@
 //   console.log(`${key}: ${user[key]}`);
 // }
 
+// //TODO:==============================================
+// /**
+// *? Поверніть об'єкт, в якому вказано кількість тегів.
+// *? Очікуваний результат {js: 3, nodejs: 3, html: 2, css: 2, react: 2}
+// */
 
-/**
- *? З об'єкту concerts потрібно отримати масив
- *? в якому будуть лише імена міст.
- *? З масиву потрібно прибрати міста, в яких концерт уже пройшов і
- *? відсортувати їх у хронологічному порядку.
- *? Результат вивести у консоль.
- *? Очікуваний результат ["Одеса", "Умань", "Харків"]
- */
-const concerts = {
-    Київ: new Date("2020-04-01"),
-    Умань: new Date("2025-07-02"),
-    Вінниця: new Date("2020-04-21"),
-    Одеса: new Date("2025-03-15"),
-    Хмельницький: new Date("2020-04-18"),
-    Харків: new Date("2025-07-10"),
-};
+// const tweets = [
+//   { id: "000", likes: 5, tags: ["js", "nodejs"] },
+//   { id: "001", likes: 2, tags: ["html", "css"] },
+//   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+//   { id: "003", likes: 8, tags: ["css", "react"] },
+//   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+// ];
 
-// const cityNames = Object.keys(concerts);
-const filterCitiesName =  Object.keys(concerts)
-    .filter(el => concerts[el] > new Date())
-    .sort((a, b) => concerts[a] - concerts[b]);
+// const tags = tweets.flatMap(item => item.tags)
+//   .reduce((acc, item) => { return {...acc, [item]:acc[item]?acc[item]+1:1} }, {})
 
-console.log(filterCitiesName)
+// console.log(tags)
+
+// /**
+//  *? З об'єкту concerts потрібно отримати масив
+//  *? в якому будуть лише імена міст.
+//  *? З масиву потрібно прибрати міста, в яких концерт уже пройшов і
+//  *? відсортувати їх у хронологічному порядку.
+//  *? Результат вивести у консоль.
+//  *? Очікуваний результат ["Одеса", "Умань", "Харків"]
+//  */
+// const concerts = {
+//     Київ: new Date("2020-04-01"),
+//     Умань: new Date("2025-07-02"),
+//     Вінниця: new Date("2020-04-21"),
+//     Одеса: new Date("2025-03-15"),
+//     Хмельницький: new Date("2020-04-18"),
+//     Харків: new Date("2025-07-10"),
+// };
+
+// // const cityNames = Object.keys(concerts);
+// const filterCitiesName =  Object.keys(concerts)
+//     .filter(el => concerts[el] > new Date())
+//     .sort((a, b) => concerts[a] - concerts[b]);
+
+// console.log(filterCitiesName)
 
 // ///**
 // // *? Напишіть функцію, яка приймає массив об'єктів і повертає новий массив
@@ -414,6 +432,7 @@ console.log(filterCitiesName)
 
 
 
+
 //Виводимо кнопку з текстом "Змінити" і два інпути, при натисканні на кнопку інпути
 //змінюються своїм введеним текстом
 
@@ -431,3 +450,117 @@ const inputSecond = document.querySelector('#js-input2');
 btn.addEventListener('click', function () {
     [inputFirst.value, inputSecond.value] = [inputSecond.value, inputFirst.value];
 })
+
+//TODO:=============================================
+/**
+ *? Напиши функцію конструктор Storage який створює об'єкти
+ *? Для управління складом товарів.
+ *? При виклику отримуватиме один агрумент - початковий масив товарів,
+ *? і записувати їх у властивість items.
+ *? Додай методи класу:
+ *? getItems() - повертайте масив товарів
+ *? addItems(item) - отримує новий товар та додає його до поточних
+ *? removeItem(item) - отримує товар і, якщо він є, видаляє його з поточних
+ */
+
+// const arr = ["apple", "banana", "mango"];
+
+// const Storage = function (array) {
+//   this.items = array;
+
+//   //   this.getItems = function () {
+//   //     return this.items;
+//   //   };
+
+//   this.addItems = function (item) {
+//     this.items.push(item);
+//   };
+
+//   this.removeItem = function (item) {
+//     const indexItem = this.items.indexOf(item);
+//     if (indexItem !== -1) {
+//       this.items.splice(indexItem, 1);
+//     }
+//   };
+// };
+
+// Storage.prototype.getItem = function () {
+//   return this.items;
+// };
+
+// const storage = new Storage(arr);
+// storage.removeItem("qwertyt");
+// console.log(storage);
+
+
+//TODO:=============================================
+
+/**
+ *? Напиши клас Client який створює об'єкт
+ *? з ​​властивостями login email
+ *? Оголоси приватні властивості #login #email,
+ *? доступ до яких зроби через геттер та сеттер login email
+ */
+
+// class Client {
+//     #login;
+//     #email;
+
+//     constructor(login, email) {
+//         this.#login = login;
+//         this.#email = email;
+//     }
+
+//     get login() {
+//         return this.#login;
+//     }
+
+//     set login(newLogin) {
+//         this.#login = newLogin;
+//     }
+
+//        get email() {
+//         return this.#email;
+//     }
+
+//     set email(newEmail) {
+//         this.#email = newEmail;
+//     }
+
+// }
+ 
+// const client = new Client("login", "gmail@gmail.com")
+// console.log(client.email)
+// console.log(client.email = "text@gmail.com")
+
+
+/*Напишіть функцію checkBrackets(str) яка приймає рядок жс коду (someFn)
+  і перевіряє правильність закриття дужок () {} []
+  Якщо рядок містить коректний код функція повертає true.
+  В іншому випадку повертає false
+*/
+
+const someFn = `function foo() {
+  const arr = [1, 2, 3];
+  console.log(arr);
+}`;
+
+function checkBrackets(someFn) {
+  const array = someFn.split("");
+
+  const idx1 = array.indexOf("(");
+  const idx2 = array.indexOf(")");
+  const idx3 = array.indexOf("3");
+  const idx4 = array.indexOf("]");
+  const idx5 = array.indexOf("g");
+   
+  return array.some(item => idx1 + 1 === idx2) &&
+    array.some(item => idx3 + 1 === idx4) &&
+    array.some((item, index, arr) => idx5 + 5 === arr.length - 4) &&
+    array.some((item, index, arr) => arr.indexOf(item) === arr.length - 1);
+
+}
+  
+console.log(checkBrackets(someFn));
+
+
