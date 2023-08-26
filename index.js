@@ -518,26 +518,74 @@
   В іншому випадку повертає false
 */
 
-const someFn = `function foo() {
-  const arr = [1, 2, 3];
-  console.log(arr);
-}`;
+// const someFn = `function foo() {
+//   const arr = [1, 2, 3];
+//   console.log(arr);
+// }`;
 
-function checkBrackets(someFn) {
-  const array = someFn.split("");
+// function checkBrackets(someFn) {
+//   const array = someFn.split("");
 
-  const idx1 = array.indexOf("(");
-  const idx2 = array.indexOf(")");
-  const idx3 = array.indexOf("3");
-  const idx4 = array.indexOf("]");
-  const idx5 = array.indexOf("g");
+//   const idx1 = array.indexOf("(");
+//   const idx2 = array.indexOf(")");
+//   const idx3 = array.indexOf("3");
+//   const idx4 = array.indexOf("]");
+//   const idx5 = array.indexOf("g");
    
-  return array.some(item => idx1 + 1 === idx2) &&
-    array.some(item => idx3 + 1 === idx4) &&
-    array.some((item, index, arr) => idx5 + 5 === arr.length - 4) &&
-    array.some((item, index, arr) => arr.indexOf(item) === arr.length - 1);
+//   return array.some(item => idx1 + 1 === idx2) &&
+//     array.some(item => idx3 + 1 === idx4) &&
+//     array.some((item, index, arr) => idx5 + 5 === arr.length - 4) &&
+//     array.some((item, index, arr) => arr.indexOf(item) === arr.length - 1);
 
-}
+// }
   
-console.log(checkBrackets(someFn));
+// console.log(checkBrackets(someFn));
+
+//Написати скрипт: при натисканні на кнопку додавати в div з ідентифікатором «container»
+//фрагмент розмітки:
+{
+  /* <div class="item"> 
+<h3>Заголовок</h3>
+<p>текст текст текст</p>
+</div> */
+}
+
+const btnEl = document.querySelector('.add-btn');
+const containerEl = document.querySelector('.container');
+
+btnEl.addEventListener('click', onClick)
+
+function onClick() {
+  const divEl = `
+  <div class="item"> 
+<h3>Заголовок</h3>
+<p>текст текст текст</p>
+</div>
+`
+  containerEl.innerHTML += divEl;
+  
+}
+
+
+
+// function onClick() {
+//   const divEl = document.createElement("div");
+//   const h3El = document.createElement("h3");
+//   const pEl = document.createElement("p");
+  
+//   console.dir(h3El)
+
+//   divEl.classList.add("item");
+//   h3El.textContent = "Заголовок";
+//   pEl.textContent = "текст текст текст";
+
+//   divEl.append(h3El, pEl);
+
+//   containerEl.append(divEl);
+
+//   console.dir(h3El)
+
+// }
+
+
 
