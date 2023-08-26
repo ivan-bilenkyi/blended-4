@@ -1,11 +1,4 @@
-/**
- *?     Используя функцию if...else,
- *?     напишите код, который будет спрашивать:
- *?     "Какое официальное название JavaScript?"
- *?     Если пользователь вводит "ECMAScript",
- *?     то показать через alert: "Верно!"
- *?     в противном случае отобразить:"Не знаете? ECMAScript!"
- */
+
 
 // let message = prompt("Какое официальное название JavaScript?");
 // let answer = "ECMAScript".toLocaleLowerCase();
@@ -723,9 +716,9 @@
 //     return stack.length === 0;
 }
 
-const someFn = `function foo() {
-  const arr = [1, 2, 3];
-  console.log(arr);
-}`;
-
-console.log(checkBrackets(someFn));
+// const someFn = `function foo() {
+//   const arr = [1, 2, 3];
+//   console.log(arr);
+// }`;
+//
+// console.log(checkBrackets(someFn));
