@@ -429,6 +429,28 @@
 //   }));
 // console.log(updateFruit(fruits));
 
+
+
+
+
+//Виводимо кнопку з текстом "Змінити" і два інпути, при натисканні на кнопку інпути
+//змінюються своїм введеним текстом
+
+const btn = document.querySelector('.btn');
+const inputFirst = document.querySelector('#js-input1');
+const inputSecond = document.querySelector('#js-input2');
+
+// btn.addEventListener('click', function () {
+//     const valFirst = inputFirst.value;
+//
+//     inputFirst.value = inputSecond.value;
+//     inputSecond.value = valFirst;
+// })
+
+btn.addEventListener('click', function () {
+    [inputFirst.value, inputSecond.value] = [inputSecond.value, inputFirst.value];
+})
+
 //TODO:=============================================
 /**
  *? Напиши функцію конструктор Storage який створює об'єкти
@@ -470,7 +492,6 @@
 // storage.removeItem("qwertyt");
 // console.log(storage);
 
-
 //TODO:=============================================
 
 /**
@@ -506,11 +527,10 @@
 //     }
 
 // }
- 
+
 // const client = new Client("login", "gmail@gmail.com")
 // console.log(client.email)
 // console.log(client.email = "text@gmail.com")
-
 
 /*Напишіть функцію checkBrackets(str) яка приймає рядок жс коду (someFn)
   і перевіряє правильність закриття дужок () {} []
@@ -531,11 +551,12 @@
 //   const idx3 = array.indexOf("3");
 //   const idx4 = array.indexOf("]");
 //   const idx5 = array.indexOf("g");
-   
+
 //   return array.some(item => idx1 + 1 === idx2) &&
 //     array.some(item => idx3 + 1 === idx4) &&
 //     array.some((item, index, arr) => idx5 + 5 === arr.length - 4) &&
 //     array.some((item, index, arr) => arr.indexOf(item) === arr.length - 1);
+
 
 // }
   
@@ -565,6 +586,50 @@
 <div class="square"></div> 
 <div class="square"></div> 
 <div class="square"></div>  
+
+
+// }
+
+// console.log(checkBrackets(someFn));
+
+/*
+
+
+Кнопка "Приховати" ховає текст і замінює назву кнопки на
+"Розкрити", при повторному натисканні текст знову стає доступним
+і кнопка набуває початкового вигляду.
+
+  <div>
+        <input id="passwordInput" value="pass123456"  type="password">
+        <button id="passwordButton">Розкрити</button>
+    </div>
+
+*/
+
+const inputEl = document.querySelector("#passwordInput");
+
+const btnEl = document.querySelector("#passwordButton");
+btnEl.addEventListener("click", onButtonClick);
+
+// function onButtonClick(event) {
+//   if (inputEl.type === "password") {
+// inputEl.type = "text";
+// btnEl.textContent = "Скрыть";
+//   } else {
+//     inputEl.type = "password";
+//     btnEl.textContent = "Розкрити";
+//   }
+// }
+
+function onButtonClick(event) {
+  const flag = inputEl.type === "password";
+
+  inputEl.type = flag ? "text" : "password";
+  btnEl.textContent = flag ? "Скрыть" : "Розкрити";
+}
+
+
+
 
 </div>*/
 }
