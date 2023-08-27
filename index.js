@@ -429,6 +429,28 @@
 //   }));
 // console.log(updateFruit(fruits));
 
+
+
+
+
+//Виводимо кнопку з текстом "Змінити" і два інпути, при натисканні на кнопку інпути
+//змінюються своїм введеним текстом
+
+const btn = document.querySelector('.btn');
+const inputFirst = document.querySelector('#js-input1');
+const inputSecond = document.querySelector('#js-input2');
+
+// btn.addEventListener('click', function () {
+//     const valFirst = inputFirst.value;
+//
+//     inputFirst.value = inputSecond.value;
+//     inputSecond.value = valFirst;
+// })
+
+btn.addEventListener('click', function () {
+    [inputFirst.value, inputSecond.value] = [inputSecond.value, inputFirst.value];
+})
+
 //TODO:=============================================
 /**
  *? Напиши функцію конструктор Storage який створює об'єкти
@@ -541,6 +563,7 @@
 
 /*
 
+
 Кнопка "Приховати" ховає текст і замінює назву кнопки на
 "Розкрити", при повторному натисканні текст знову стає доступним
 і кнопка набуває початкового вигляду.
@@ -573,3 +596,6 @@ function onButtonClick(event) {
   inputEl.type = flag ? "text" : "password";
   btnEl.textContent = flag ? "Скрыть" : "Розкрити";
 }
+
+
+
