@@ -492,7 +492,7 @@ btn.addEventListener('click', function () {
 // storage.removeItem("qwertyt");
 // console.log(storage);
 
-//TODO:=============================================
+
 
 /**
  *? Напиши клас Client який створює об'єкт
@@ -542,6 +542,96 @@ btn.addEventListener('click', function () {
 //   const arr = [1, 2, 3];
 //   console.log(arr);
 // }`;
+
+
+// const searchEl1 = ["(", ")"];
+// const searchEl2 = ["{", "}"];
+// const searchEl3 = ["[", "]"];
+
+// let counter1 = [];
+// let counter2 = [];
+// let counter3 = [];
+
+// function checkBrackets(str) {
+//   const newStr = [...str];
+//   for (let i = 0; i < newStr.length; i++) {
+//     // debugger;
+//     if (searchEl1.includes(newStr[i])) {
+//       counter1.push(newStr[i]);
+//     } else if (searchEl2.includes(newStr[i])) {
+//       counter2.push(newStr[i]);
+//     } else if (searchEl3.includes(newStr[i])) {
+//       counter3.push(newStr[i]);
+//     }
+//   }
+//   if (
+//     counter1.length % 2 !== 0 ||
+//     counter2.length % 2 !== 0 ||
+//     counter3.length % 2 !== 0
+//   ) {
+//     return false;
+//   }
+//   return true;
+// }
+// console.log(checkBrackets(someFn));
+
+// const someFn = `function foo() {
+//   const arr = [1, 2, 3];
+//   console.log(arr);
+// }`;
+
+// const stack = [];
+
+// function checkBrackets(str) {
+//   let counter = 0;
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] == "(" || str[i] == "{" || str[i] == "[") {
+//       counter++;
+//     } else if (str[i] == ")" || str[i] == "}" || str[i] == "]") {
+//       counter--;
+//     }
+//     if (counter < 0) return false;
+//   }
+//   if (counter > 0) return false;
+
+//   return counter === 0;
+// }
+// console.log(checkBrackets(someFn));
+
+const someFn = `functin foo () {
+   const arr =  [1, 2, 3];
+   console.log(arr);
+}`;
+const checkBrackets = (str) => {
+  let stack = [];
+
+  str.split("").map((el) => {
+    switch (el) {
+      case "(":
+      case "[":
+      case "{":
+        // console.log(stack);
+        if (stack.length === 0) {
+          return false;
+        }
+        stack = [...stack, el];
+        break;
+      case ")":
+      case "]":
+      case "}":
+        // console.log(stack);
+        if (stack.length === 0) {
+          return (stack = [...stack, el]);
+        }
+        stack = stack.slice(1);
+        break;
+    }
+  });
+
+  // console.log(stack.length ? "Not balanced" : "Balanced");
+  return !stack.length;
+};
+console.log(checkBrackets(someFn));
 
 // function checkBrackets(someFn) {
 //   const array = someFn.split("");
@@ -654,3 +744,4 @@ function onClick(event) {
   event.target.classList.add("green");
   
 }
+
