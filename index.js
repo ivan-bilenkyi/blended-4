@@ -429,6 +429,28 @@
 //   }));
 // console.log(updateFruit(fruits));
 
+
+
+
+
+//Виводимо кнопку з текстом "Змінити" і два інпути, при натисканні на кнопку інпути
+//змінюються своїм введеним текстом
+
+const btn = document.querySelector('.btn');
+const inputFirst = document.querySelector('#js-input1');
+const inputSecond = document.querySelector('#js-input2');
+
+// btn.addEventListener('click', function () {
+//     const valFirst = inputFirst.value;
+//
+//     inputFirst.value = inputSecond.value;
+//     inputSecond.value = valFirst;
+// })
+
+btn.addEventListener('click', function () {
+    [inputFirst.value, inputSecond.value] = [inputSecond.value, inputFirst.value];
+})
+
 //TODO:=============================================
 /**
  *? Напиши функцію конструктор Storage який створює об'єкти
@@ -470,7 +492,7 @@
 // storage.removeItem("qwertyt");
 // console.log(storage);
 
-//TODO:=============================================
+
 
 /**
  *? Напиши клас Client який створює об'єкт
@@ -520,6 +542,7 @@
 //   const arr = [1, 2, 3];
 //   console.log(arr);
 // }`;
+
 
 // const searchEl1 = ["(", ")"];
 // const searchEl2 = ["{", "}"];
@@ -609,3 +632,116 @@ const checkBrackets = (str) => {
   return !stack.length;
 };
 console.log(checkBrackets(someFn));
+
+// function checkBrackets(someFn) {
+//   const array = someFn.split("");
+
+//   const idx1 = array.indexOf("(");
+//   const idx2 = array.indexOf(")");
+//   const idx3 = array.indexOf("3");
+//   const idx4 = array.indexOf("]");
+//   const idx5 = array.indexOf("g");
+
+//   return array.some(item => idx1 + 1 === idx2) &&
+//     array.some(item => idx3 + 1 === idx4) &&
+//     array.some((item, index, arr) => idx5 + 5 === arr.length - 4) &&
+//     array.some((item, index, arr) => arr.indexOf(item) === arr.length - 1);
+
+
+// }
+  
+// console.log(checkBrackets(someFn));
+
+//Вивести 4 червоні квадрати, при кліку на будь-який, він ставати зеленим, при цьому якщо
+//є вже зелений квадрат, то він ставати назад червоним і так можна кликати на будь-який
+//квадрат, він ставати зеленим, а старий зелений квадрат назад червоним і тд.
+//(Зробити завдання так, щоб можна було додати ще хоч 100 квадратів, при цьому скрипт не
+//треба міняти).
+
+{
+  /* 
+  
+  .square {
+  width: 150px;
+  height: 150px;
+  background: red;
+  margin: 10px;
+}
+
+.square.green {
+  background: green;
+}
+<div class="wrapper">
+  <div class="square"></div> 
+<div class="square"></div> 
+<div class="square"></div> 
+<div class="square"></div>  
+
+
+// }
+
+// console.log(checkBrackets(someFn));
+
+/*
+
+
+Кнопка "Приховати" ховає текст і замінює назву кнопки на
+"Розкрити", при повторному натисканні текст знову стає доступним
+і кнопка набуває початкового вигляду.
+
+  <div>
+        <input id="passwordInput" value="pass123456"  type="password">
+        <button id="passwordButton">Розкрити</button>
+    </div>
+
+*/
+
+const inputEl = document.querySelector("#passwordInput");
+
+const btnEl = document.querySelector("#passwordButton");
+btnEl.addEventListener("click", onButtonClick);
+
+// function onButtonClick(event) {
+//   if (inputEl.type === "password") {
+// inputEl.type = "text";
+// btnEl.textContent = "Скрыть";
+//   } else {
+//     inputEl.type = "password";
+//     btnEl.textContent = "Розкрити";
+//   }
+// }
+
+function onButtonClick(event) {
+  const flag = inputEl.type === "password";
+
+  inputEl.type = flag ? "text" : "password";
+  btnEl.textContent = flag ? "Скрыть" : "Розкрити";
+}
+
+
+
+
+</div>*/
+}
+
+const div = document.querySelectorAll(".square");
+
+div.forEach(box => {
+  console.log(box);
+  box.addEventListener('click', onClick);
+})
+
+function onClick(event) {
+
+  for (let i = 0; i < div.length; i += 1) {
+
+    if (div[i].classList.contains('green')) {
+      div[i].classList.remove('green');
+      break;
+    }
+  }
+
+  event.target.classList.add("green");
+  
+}
+
