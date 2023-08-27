@@ -492,7 +492,6 @@ btn.addEventListener('click', function () {
 // storage.removeItem("qwertyt");
 // console.log(storage);
 
-
 //TODO:=============================================
 
 /**
@@ -528,11 +527,10 @@ btn.addEventListener('click', function () {
 //     }
 
 // }
- 
+
 // const client = new Client("login", "gmail@gmail.com")
 // console.log(client.email)
 // console.log(client.email = "text@gmail.com")
-
 
 /*Напишіть функцію checkBrackets(str) яка приймає рядок жс коду (someFn)
   і перевіряє правильність закриття дужок () {} []
@@ -540,27 +538,64 @@ btn.addEventListener('click', function () {
   В іншому випадку повертає false
 */
 
-const someFn = `function foo() {
-  const arr = [1, 2, 3];
-  console.log(arr);
-}`;
+// const someFn = `function foo() {
+//   const arr = [1, 2, 3];
+//   console.log(arr);
+// }`;
 
-function checkBrackets(someFn) {
-  const array = someFn.split("");
+// function checkBrackets(someFn) {
+//   const array = someFn.split("");
 
-  const idx1 = array.indexOf("(");
-  const idx2 = array.indexOf(")");
-  const idx3 = array.indexOf("3");
-  const idx4 = array.indexOf("]");
-  const idx5 = array.indexOf("g");
-   
-  return array.some(item => idx1 + 1 === idx2) &&
-    array.some(item => idx3 + 1 === idx4) &&
-    array.some((item, index, arr) => idx5 + 5 === arr.length - 4) &&
-    array.some((item, index, arr) => arr.indexOf(item) === arr.length - 1);
+//   const idx1 = array.indexOf("(");
+//   const idx2 = array.indexOf(")");
+//   const idx3 = array.indexOf("3");
+//   const idx4 = array.indexOf("]");
+//   const idx5 = array.indexOf("g");
 
+//   return array.some(item => idx1 + 1 === idx2) &&
+//     array.some(item => idx3 + 1 === idx4) &&
+//     array.some((item, index, arr) => idx5 + 5 === arr.length - 4) &&
+//     array.some((item, index, arr) => arr.indexOf(item) === arr.length - 1);
+
+// }
+
+// console.log(checkBrackets(someFn));
+
+/*
+
+
+Кнопка "Приховати" ховає текст і замінює назву кнопки на
+"Розкрити", при повторному натисканні текст знову стає доступним
+і кнопка набуває початкового вигляду.
+
+  <div>
+        <input id="passwordInput" value="pass123456"  type="password">
+        <button id="passwordButton">Розкрити</button>
+    </div>
+
+*/
+
+const inputEl = document.querySelector("#passwordInput");
+
+const btnEl = document.querySelector("#passwordButton");
+btnEl.addEventListener("click", onButtonClick);
+
+// function onButtonClick(event) {
+//   if (inputEl.type === "password") {
+// inputEl.type = "text";
+// btnEl.textContent = "Скрыть";
+//   } else {
+//     inputEl.type = "password";
+//     btnEl.textContent = "Розкрити";
+//   }
+// }
+
+function onButtonClick(event) {
+  const flag = inputEl.type === "password";
+
+  inputEl.type = flag ? "text" : "password";
+  btnEl.textContent = flag ? "Скрыть" : "Розкрити";
 }
-  
-console.log(checkBrackets(someFn));
+
 
 
