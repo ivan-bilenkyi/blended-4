@@ -557,6 +557,37 @@ btn.addEventListener('click', function () {
 //     array.some((item, index, arr) => idx5 + 5 === arr.length - 4) &&
 //     array.some((item, index, arr) => arr.indexOf(item) === arr.length - 1);
 
+
+// }
+  
+// console.log(checkBrackets(someFn));
+
+//Вивести 4 червоні квадрати, при кліку на будь-який, він ставати зеленим, при цьому якщо
+//є вже зелений квадрат, то він ставати назад червоним і так можна кликати на будь-який
+//квадрат, він ставати зеленим, а старий зелений квадрат назад червоним і тд.
+//(Зробити завдання так, щоб можна було додати ще хоч 100 квадратів, при цьому скрипт не
+//треба міняти).
+
+{
+  /* 
+  
+  .square {
+  width: 150px;
+  height: 150px;
+  background: red;
+  margin: 10px;
+}
+
+.square.green {
+  background: green;
+}
+<div class="wrapper">
+  <div class="square"></div> 
+<div class="square"></div> 
+<div class="square"></div> 
+<div class="square"></div>  
+
+
 // }
 
 // console.log(checkBrackets(someFn));
@@ -599,3 +630,27 @@ function onButtonClick(event) {
 
 
 
+
+</div>*/
+}
+
+const div = document.querySelectorAll(".square");
+
+div.forEach(box => {
+  console.log(box);
+  box.addEventListener('click', onClick);
+})
+
+function onClick(event) {
+
+  for (let i = 0; i < div.length; i += 1) {
+
+    if (div[i].classList.contains('green')) {
+      div[i].classList.remove('green');
+      break;
+    }
+  }
+
+  event.target.classList.add("green");
+  
+}
